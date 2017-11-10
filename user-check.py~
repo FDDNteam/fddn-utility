@@ -21,6 +21,10 @@ res = request.urlopen(req)
 output = sys.stdout
 outfile = open('fddn-email.txt','w')
 
+def A():
+    for k in soup.find_all('tr', class_ = 'main-row'):                         
+        for a in k.find_all('td', class_ = 'weak-color medium-border-color adbayes-content'):
+            print (a.div.a.get_text())
 
 def B():
     html = res.read()
