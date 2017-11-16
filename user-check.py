@@ -43,9 +43,9 @@ def B():
             if(len(sss) > 1):
                 table.append({'name': sss[0], 'email': sss[1]})
    
-    print("---------users---------")
-    for user in table:
-        print(user)
+#    print("---------users---------")
+ #   for user in table:
+  #      print(user)
     return table
 
 def C():
@@ -67,9 +67,9 @@ def C():
 
   #  print(table)
  
-    print("-------subscribers-------")
-    for user in table:
-        print(user)
+#    print("-------subscribers-------")
+#    for user in table:
+ #       print(user)
    
     return table
 
@@ -103,8 +103,8 @@ def E(url):
         s = s.replace(' ','')
         table.append({'name': s})
 
-    for user in table:
-        print(user)
+  #  for user in table:
+   #     print(user)
   
     return table
 
@@ -112,15 +112,14 @@ def E(url):
 
 def printTable(table):
     for a in table:
-        print(a['name'])
-        print(a['email'])
+        print(a['name'] + ' ' + a['email'])
 
 output = sys.stdout
 outfile = open('fddn-email.txt','w')   
 
 userTable = B()
 subTable = C() 
-print("--------intro--------")  
+#print("--------intro--------")  
 introTable = E('http://forum.fddn.network/-td8.html') + E('http://forum.fddn.network/-td8i20.html')
 table1 = D(userTable, subTable)
 table2 = D(userTable, introTable)
